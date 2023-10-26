@@ -1,0 +1,50 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        
+        {
+            "name": "simpsons_character_viewer",
+            "cwd": "apps/simpsons_character_viewer",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "simpsons_character_viewer (profile mode)",
+            "cwd": "apps/simpsons_character_viewer",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "simpsons_character_viewer (release mode)",
+            "cwd": "apps/simpsons_character_viewer",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "the_wire_character_viewer",
+            "cwd": "apps/the_wire_character_viewer",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "the_wire_character_viewer (profile mode)",
+            "cwd": "apps/the_wire_character_viewer",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "the_wire_character_viewer (release mode)",
+            "cwd": "apps/the_wire_character_viewer",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
