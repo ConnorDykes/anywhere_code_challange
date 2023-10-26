@@ -22,6 +22,12 @@ class CharactersRemoteDataSourceImpl extends CharactersRemoteDataSource {
       List<CharacterModel> characters = jsonResponse['RelatedTopics']
           .map<CharacterModel>((item) => CharacterModel.fromJson(item))
           .toList();
+      // The api is returning "Apu" twice for some reason so I removed it
+      // final apuIndex = characters.indexWhere((char) =>
+      //     char.name == "https://duckduckgo.com/Apu_Nahasapeemapetilan");
+
+      characters.removeAt(0);
+
       return characters;
     } else {
       throw Exception('Failed to load characters');

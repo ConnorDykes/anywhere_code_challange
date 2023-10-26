@@ -16,4 +16,12 @@ class HomeViewModel {
                 CharactersRemoteDataSourceImpl(client: Client())))
         .getCharacters();
   }
+
+  List<CharacterModel> search(
+      {required List<CharacterModel> characters, required String query}) {
+    return characters
+        .where((character) =>
+            character.name.toLowerCase().contains(query.toLowerCase()))
+        .toList();
+  }
 }

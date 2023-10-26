@@ -15,7 +15,7 @@ class CharacterRepoImpl extends CharacterRepository {
       debugPrint(e.toString());
       // I return a list of one Character Model that has an error message in it
       // This was I can see in the UI that there was an issue.
-      return [CharacterModel(url: "", text: "Error: {$e}")];
+      return [CharacterModel(name: "", text: "Error: {$e}", image: '')];
     }
   }
 }
