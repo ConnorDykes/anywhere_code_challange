@@ -16,7 +16,7 @@ This repository includes two flutter projects using a shared code base. To run t
 ---- Testing ----
 
 To run all test go to the terminal and enter : flutter test 
-or run them individually from the Testing Pannel 
+
 
 ![Alt text](<Simulator Screenshot - iPhone 13 - 2023-10-26 at 22.18.39.png>)
 
