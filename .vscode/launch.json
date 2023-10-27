@@ -13,12 +13,7 @@
             "type": "dart",
             "args": ["test"]
         },
-        {
-            "name": "Run Flutter Tests",
-            "type": "dart",
-            "request": "launch",
-            "args": ["test"]
-          },
+        
         // {
         //     "name": "simpsons_character_viewer (profile mode)",
         //     "cwd": "apps/simpsons_character_viewer",

@@ -29,16 +29,21 @@ void main() {
   });
 
   group('search', () {
-    test('returns a list of CharacterModel that contains the query', () {
+    test(
+        'returns a list of CharacterModel that contains the query in either the name or the text',
+        () {
       final characters = [
         CharacterModel(name: 'Test1', text: '', image: ''),
-        CharacterModel(name: 'Test2', text: '', image: ''),
+        CharacterModel(name: 'Test2', text: 'Test1', image: ''),
         CharacterModel(name: 'Test3', text: '', image: ''),
       ];
 
       final result = viewModel.search(characters: characters, query: 'Test1');
 
-      expect(result, [CharacterModel(name: 'Test1', text: '', image: '')]);
+      expect(result, [
+        CharacterModel(name: 'Test1', text: '', image: ''),
+        CharacterModel(name: 'Test2', text: 'Test1', image: ''),
+      ]);
     });
   });
 }

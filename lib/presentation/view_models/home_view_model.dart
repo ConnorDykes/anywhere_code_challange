@@ -21,9 +21,16 @@ class HomeViewModel {
 
   List<CharacterModel> search(
       {required List<CharacterModel> characters, required String query}) {
-    return characters
+    var characterNames = characters
         .where((character) =>
             character.name.toLowerCase().contains(query.toLowerCase()))
         .toList();
+
+    var characterDescriptions = characters
+        .where((character) =>
+            character.text.toLowerCase().contains(query.toLowerCase()))
+        .toList();
+
+    return [...characterNames, ...characterDescriptions];
   }
 }
