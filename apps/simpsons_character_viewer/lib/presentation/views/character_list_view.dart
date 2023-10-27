@@ -5,14 +5,14 @@ import 'package:simpsons_character_viewer/data/models/character_model.dart';
 import 'package:simpsons_character_viewer/presentation/view_models/home_view_model.dart';
 import 'package:simpsons_character_viewer/presentation/views/detail_view.dart';
 
-class HomeView extends StatefulWidget {
-  const HomeView({super.key});
+class CharacterListView extends StatefulWidget {
+  const CharacterListView({super.key});
 
   @override
-  State<HomeView> createState() => _HomeViewState();
+  State<CharacterListView> createState() => _CharacterListViewState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class _CharacterListViewState extends State<CharacterListView> {
   final viewModel = HomeViewModel();
   TextEditingController searchController = TextEditingController();
   Future<List<CharacterModel>>? charactersFuture;

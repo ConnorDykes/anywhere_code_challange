@@ -18,15 +18,18 @@ class CharactersRemoteDataSourceImpl extends CharactersRemoteDataSource {
 
     //The only relevant field fro the api is the "RelatedTopics", we deduce the model date from that
     if (response.statusCode == 200) {
-      Map<String, dynamic> jsonResponse = json.decode(response.body);
-      List<CharacterModel> characters = jsonResponse['RelatedTopics']
-          .map<CharacterModel>((item) => CharacterModel.fromJson(item))
-          .toList();
-      // The api is returning "Apu" twice for some reason so I removed it
-      // final apuIndex = characters.indexWhere((char) =>
-      //     char.name == "https://duckduckgo.com/Apu_Nahasapeemapetilan");
+      final jsonResponse = json.decode(response.body);
 
-      characters.removeAt(0);
+      List<CharacterModel> characters = (jsonResponse['RelatedTopics']
+              as List<dynamic>)
+          .map<CharacterModel>(
+              (item) => CharacterModel.fromJson(item as Map<String, dynamic>))
+          .toList();
+
+      // The api is returning "Apu" twice for some reason so I removed it
+      if (characters.first.name == "Apu Nahasapeemapetilan") {
+        characters.removeAt(0);
+      }
 
       return characters;
     } else {

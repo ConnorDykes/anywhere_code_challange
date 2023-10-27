@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:simpsons_character_viewer/presentation/views/home_view.dart';
+import 'package:simpsons_character_viewer/presentation/views/character_list_view.dart';
+import 'package:simpsons_character_viewer/presentation/views/tablet/tablet_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return MaterialApp(
       theme: ThemeData(
         // This is the theme of your application.
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeView(),
+      home: screenWidth > 500 ? TabletView() : const CharacterListView(),
     );
   }
 }
