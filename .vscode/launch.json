@@ -10,41 +10,48 @@
             "name": "simpsons_character_viewer",
             "cwd": "apps/simpsons_character_viewer",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": ["test"]
         },
         {
-            "name": "simpsons_character_viewer (profile mode)",
-            "cwd": "apps/simpsons_character_viewer",
-            "request": "launch",
+            "name": "Run Flutter Tests",
             "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "simpsons_character_viewer (release mode)",
-            "cwd": "apps/simpsons_character_viewer",
             "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
+            "args": ["test"]
+          },
+        // {
+        //     "name": "simpsons_character_viewer (profile mode)",
+        //     "cwd": "apps/simpsons_character_viewer",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "flutterMode": "profile"
+        // },
+        // {
+        //     "name": "simpsons_character_viewer (release mode)",
+        //     "cwd": "apps/simpsons_character_viewer",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "flutterMode": "release"
+        // },
         {
             "name": "the_wire_character_viewer",
             "cwd": "apps/the_wire_character_viewer",
             "request": "launch",
             "type": "dart"
         },
-        {
-            "name": "the_wire_character_viewer (profile mode)",
-            "cwd": "apps/the_wire_character_viewer",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "the_wire_character_viewer (release mode)",
-            "cwd": "apps/the_wire_character_viewer",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        }
+        // {
+        //     "name": "the_wire_character_viewer (profile mode)",
+        //     "cwd": "apps/the_wire_character_viewer",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "flutterMode": "profile"
+        // },
+        // {
+        //     "name": "the_wire_character_viewer (release mode)",
+        //     "cwd": "apps/the_wire_character_viewer",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "flutterMode": "release"
+        // }
     ]
 }

@@ -1,6 +1,3 @@
-import 'dart:io';
-
-import '../../../apps/simpsons_character_viewer/lib/constants.dart';
 import 'package:anywhere_code_challange/data/data_source/remote_data_source.dart';
 import 'package:anywhere_code_challange/data/models/character_model.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -17,8 +14,9 @@ void main() {
 
   setUp(() {
     mockHttpClient = MockClient();
-    dataSource =
-        CharactersRemoteDataSourceImpl(client: mockHttpClient, apiUrl: "");
+    dataSource = CharactersRemoteDataSourceImpl(
+        client: mockHttpClient,
+        apiUrl: 'http://api.duckduckgo.com/?q=simpsons+characters&format=json');
   });
 
   group('getCharacters', () {
@@ -33,8 +31,9 @@ void main() {
         () async {
       // Arrange
 
-      when(mockHttpClient.get(Uri.parse(apiURl))).thenAnswer((_) async =>
-          http.Response(
+      when(mockHttpClient.get(Uri.parse(
+              'http://api.duckduckgo.com/?q=simpsons+characters&format=json')))
+          .thenAnswer((_) async => http.Response(
               '{"RelatedTopics" : [{"FirstURL": "https://duckduckgo.com/Homer_Simpson","Text": "Homer Simpson - Character from The Simpsons","Icon": {"URL": "i/homer.png"}}]}',
               200));
       // Act
@@ -46,7 +45,8 @@ void main() {
 
     test('throws an Exception when the response code is not 200', () {
       // Arrange
-      when(mockHttpClient.get(Uri.parse(apiURl)))
+      when(mockHttpClient.get(Uri.parse(
+              'http://api.duckduckgo.com/?q=simpsons+characters&format=json')))
           .thenAnswer((_) async => http.Response('Something went wrong', 404));
       // Act
       final call = dataSource.getCharacters;
