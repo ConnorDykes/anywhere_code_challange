@@ -21,8 +21,8 @@ class _TabletViewState extends State<TabletView> {
   @override
   void initState() {
     super.initState();
+    viewModel = HomeViewModel(apiUrl: widget.apiUrl);
     charactersFuture = viewModel.getCharacters();
-    HomeViewModel(apiUrl: widget.apiUrl);
   }
 
   selectCharacter(CharacterModel character) {

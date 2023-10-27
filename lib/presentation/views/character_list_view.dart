@@ -13,15 +13,15 @@ class CharacterListView extends StatefulWidget {
 }
 
 class _CharacterListViewState extends State<CharacterListView> {
-  late final HomeViewModel viewModel;
+  late HomeViewModel viewModel;
   TextEditingController searchController = TextEditingController();
   Future<List<CharacterModel>>? charactersFuture;
 
   @override
   void initState() {
     super.initState();
+    viewModel = HomeViewModel(apiUrl: widget.apiUrl);
     charactersFuture = viewModel.getCharacters();
-    HomeViewModel(apiUrl: widget.apiUrl);
   }
 
   @override
