@@ -19,5 +19,7 @@ This repository includes two flutter projects using a shared code base. To run t
 
 ![Alt text](<Simulator Screenshot - iPad Pro (11-inch) (4th generation) - 2023-10-26 at 22.19.16.png>)
 
----- Whats Next ----
+---- Testing ----
 
+To run all test go to the terminal and enter : flutter test 
+or run them individually from the Testing Pannel 
