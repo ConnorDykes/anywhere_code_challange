@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 
 class CharacterListView extends StatefulWidget {
   final String apiUrl;
-  const CharacterListView({super.key, required this.apiUrl});
+  final String title;
+  const CharacterListView(
+      {super.key, required this.apiUrl, required this.title});
 
   @override
   State<CharacterListView> createState() => _CharacterListViewState();
@@ -27,7 +29,7 @@ class _CharacterListViewState extends State<CharacterListView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Simpsons Character Viewer')),
+      appBar: AppBar(title: Text(widget.title)),
       body: Column(
         children: [
           Padding(

@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final api = apiUrl;
     double screenWidth = MediaQuery.of(context).size.width;
+    final String title = "The Wire Character Viewer";
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -23,9 +24,11 @@ class MyApp extends StatelessWidget {
       ),
       home: screenWidth > 500
           ? TabletView(
+              title: title,
               apiUrl: api,
             )
           : CharacterListView(
+              title: title,
               apiUrl: api,
             ),
     );
