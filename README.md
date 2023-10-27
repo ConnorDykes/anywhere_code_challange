@@ -13,13 +13,14 @@ This repository includes two flutter projects using a shared code base. To run t
 4. Ensure you have a device selected, you can find the device selection menu by clicking the text at the bottom of your VS code editor that shows your currently selected device or my going to the command pallet and typing:  
 " >Flutter: Launch Emulator "
 
+---- Testing ----
+
+To run all test go to the terminal and enter : flutter test 
+or run them individually from the Testing Pannel 
+
 ![Alt text](<Simulator Screenshot - iPhone 13 - 2023-10-26 at 22.18.39.png>)
 
 ![Alt text](<Simulator Screenshot - iPhone 13 - 2023-10-26 at 22.18.41.png>)
 
 ![Alt text](<Simulator Screenshot - iPad Pro (11-inch) (4th generation) - 2023-10-26 at 22.19.16.png>)
 
----- Testing ----
-
-To run all test go to the terminal and enter : flutter test 
-or run them individually from the Testing Pannel 
