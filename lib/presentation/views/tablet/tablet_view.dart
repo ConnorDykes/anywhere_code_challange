@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 
 class TabletView extends StatefulWidget {
   final String apiUrl;
-  const TabletView({super.key, required this.apiUrl});
+  final String title;
+  const TabletView({super.key, required this.apiUrl, required this.title});
 
   @override
   State<TabletView> createState() => _TabletViewState();
@@ -34,7 +35,7 @@ class _TabletViewState extends State<TabletView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Simpsons Character Viewer')),
+      appBar: AppBar(title: Text(widget.title)),
       body: Row(
         children: [
           Flexible(

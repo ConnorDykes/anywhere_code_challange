@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final apiUrl = apiURl;
     double screenWidth = MediaQuery.of(context).size.width;
+    final String title = 'Simpsons Character Viewer';
     return MaterialApp(
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -22,9 +23,11 @@ class MyApp extends StatelessWidget {
       ),
       home: screenWidth > 500
           ? TabletView(
+              title: title,
               apiUrl: apiUrl,
             )
           : CharacterListView(
+              title: title,
               apiUrl: apiUrl,
             ),
     );
